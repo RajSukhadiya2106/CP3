@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (!empty($email) && !empty($password)) {
-    $sql = "SELECT User_id, User_name, Email, Password, is_admin FROM User WHERE Email = '$email' AND Password = '$password' ";
+    $sql = "SELECT User_id, User_name, Email, Password, is_admin FROM User WHERE Email = '$email' AND Password = '$password'  and is_admin = 0";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -48,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="meta description">
-  <title>Footwear Shop</title>
+  <title>Our Footwear Shop</title>
   <!--=== Favicon ===-->
-  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <!-- <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" /> -->
   <!--=== All Plugins CSS ===-->
   <link href="assets/css/plugins.css" rel="stylesheet">
   <!--=== All Vendor CSS ===-->
@@ -91,6 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   </div>
 
                   <div class="card-footer text-right">
+                    <p>Don't have an account? <a href="register.php">Register</a></p>
                     <button class="btn btn-primary mr-1" type="submit">Login</button>
                   </div>
                 </form>
@@ -103,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </main>
   <style>
     .error {
-      color: pink:
+      color: pink;
     }
   </style>
   <!-- General JS Scripts -->

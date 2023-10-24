@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <?php
 
 
@@ -13,16 +13,17 @@ if (isset($_SESSION['User_id'])) {
 
 // $uid=$_SESSION['User_id'];
 
-$cart = "SELECT count(*) as total_cart FROM `cart` c join user u where c.User_id=u.User_id and c.User_id='".$uid."'";
-	$result = mysqli_query($conn,$cart);
-	$row = mysqli_fetch_array($result);
-	$cart_count = $row['total_cart'];
+$cart = "SELECT count(*) as total_cart FROM `cart` c join user u where c.User_id=u.User_id and c.User_id='" . $uid . "'";
+$result = mysqli_query($conn, $cart);
+$row = mysqli_fetch_array($result);
+$cart_count = $row['total_cart'];
 
 ?>
 
 <html class="no-js" lang="zxx">
 
 <!-- Mirrored from demo.hasthemes.com/juan-preview-v1/juan/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Dec 2019 08:05:18 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,13 +45,13 @@ $cart = "SELECT count(*) as total_cart FROM `cart` c join user u where c.User_id
 <![endif]-->
 </head>
 
-<body >
+<body>
 
     <!-- Start Header Area -->
     <header class="header-area">
         <!-- main header start -->
         <div class="main-header d-none d-lg-block">
-            
+
 
             <!-- header middle area start -->
             <div class="header-main-area sticky">
@@ -74,54 +75,50 @@ $cart = "SELECT count(*) as total_cart FROM `cart` c join user u where c.User_id
                                     <nav class="desktop-menu">
                                         <ul>
                                             <li class="active"><a href="index.php">Home</a>
-                                                
+
                                             </li>
                                             <li class="static"><a href="#">Category <i class="fa fa-angle-down"></i></a>
                                                 <ul class="megamenu dropdown">
                                                     <?php
-														$sql="select * from category";
-														$result=mysqli_query($conn,$sql);
-										        while($row=mysqli_fetch_array($result))
-												{
-													$cid=$row['C_id']
-													?>
-													
-													<li class="mega-title"><a href="#"><?php echo $row['C_name']?></a>
-                                                <ul>
-														<?php
-												$sql1="select*from `sub-category` s join category c where s.C_id =c.C_id and s.C_id='3'";
-												$result1=mysqli_query($conn,$sql1);
-										        while($row1=mysqli_fetch_array($result1))
-												{
-										    ?><li><a href="products.php?id=<?php echo $row1['Sub_C_id']?>">
-											<?php echo $row1['Sub_C_name']?></a></li>
-                                                         
-														 
-														 <?php
-												}
-														 ?>          
-                                            		</ul>
-													</li>
-												        <?php
-												}
-														 ?> 
-												 
+                                                    $sql = "select * from category";
+                                                    $result = mysqli_query($conn, $sql);
+                                                    while ($row = mysqli_fetch_array($result)) {
+                                                        $cid = $row['C_id']
+                                                    ?>
+                                                        <li class="mega-title"><a href="#"><?php echo $row['C_name'] ?></a>
+                                                            <ul>
+                                                                <?php
+                                                                $sql1 = "select*from `sub-category` s join category c where s.C_id =c.C_id and s.C_id='3'";
+                                                                $result1 = mysqli_query($conn, $sql1);
+                                                                while ($row1 = mysqli_fetch_array($result1)) {
+                                                                ?>
+                                                                <li>
+                                                                    <a href="products.php?id=<?php echo $row1['Sub_C_id'] ?>">
+                                                                            <?php echo $row1['Sub_C_name'] ?></a></li>
+                                                                <?php
+                                                                }
+                                                                ?>
+                                                            </ul>
+                                                        </li>
+                                                    <?php
+                                                    }
+                                                    ?>
+
                                                 </ul>
                                             </li>
-                                           
+
 
                                             <li><a href="contactus.php">Contact us</a></li>
-											<?php
-										
-											if(isset ($_SESSION['User_id']))
-												{ ?>
-											  <li><a href="myorder.php">My order</i></a></li>
-											
-											<?php } ?>
-											  											
-											  <li><a href="aboutus.php">About Us</i></a></li>
-                                        
-												
+                                            <?php
+
+                                            if (isset($_SESSION['User_id'])) { ?>
+                                                <li><a href="myorder.php">My order</i></a></li>
+
+                                            <?php } ?>
+
+                                            <li><a href="aboutus.php">About Us</i></a></li>
+
+
                                         </ul>
                                     </nav>
                                     <!-- main menu navbar end -->
@@ -135,69 +132,61 @@ $cart = "SELECT count(*) as total_cart FROM `cart` c join user u where c.User_id
                             <div class="header-configure-wrapper">
                                 <div class="header-configure-area">
                                     <ul class="nav justify-content-end">
-                                        <li>
+                                        <!-- <li>
                                             <a href="#" class="offcanvas-btn">
                                                 <i class="ion-ios-search-strong"></i>
                                             </a>
-                                        </li>
-									 
+                                        </li> -->
+
                                         <li class="user-hover">
                                             <a href="#">
                                                 <i class="ion-ios-gear-outline"></i>
                                             </a>
                                             <ul class="dropdown-list">
-											<?php
-											if(isset($_SESSION['User_id']))
-											{
-												?>
-												<?php
-											}
-											else
-											{
-											?>
-                                                <li><a href="login.php">login</a></li>
-											<?php
-											}
-											?>
-												<?php
-											if(isset($_SESSION['User_id']))
-											{
-												?>
-											<?php
-											}
-											else
-											{
-											?>	
-											
-                                                <li><a href="register.php">register</a></li>
-												<?php
-											}
-											?>
-												<?php
-											if(isset($_SESSION['User_id']))
-											{
-										?>
-									
-												
-                                                <li><a href="account.php">my account</a></li>
-													<?php
-											}
-											?>
-													<?php
-											if(isset($_SESSION['User_id']))
-											{
-												?>
-												 <li><a href="logout.php">logout</a></li>
-												 	<?php
-											}
-											?>
+                                                <?php
+                                                if (isset($_SESSION['User_id'])) {
+                                                ?>
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <li><a href="login.php">login</a></li>
+                                                <?php
+                                                }
+                                                ?>
+                                                <?php
+                                                if (isset($_SESSION['User_id'])) {
+                                                ?>
+                                                <?php
+                                                } else {
+                                                ?>
+
+                                                    <li><a href="register.php">register</a></li>
+                                                <?php
+                                                }
+                                                ?>
+                                                <?php
+                                                if (isset($_SESSION['User_id'])) {
+                                                ?>
+
+
+                                                    <li><a href="account.php">my account</a></li>
+                                                <?php
+                                                }
+                                                ?>
+                                                <?php
+                                                if (isset($_SESSION['User_id'])) {
+                                                ?>
+                                                    <li><a href="logout.php">logout</a></li>
+                                                <?php
+                                                }
+                                                ?>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#" class="minicart-btn">
+                                            <a href="cart1.php" class="minicart-btn">
                                                 <i class="ion-bag"></i>
-												
-												<div class="notification"><?php echo $cart_count;?></div>
+
+                                                <div class="notification"><?php echo $cart_count; ?></div>
                                                 <!-- <div class="notification"></div> -->
                                             </a>
                                         </li>
@@ -248,4 +237,3 @@ $cart = "SELECT count(*) as total_cart FROM `cart` c join user u where c.User_id
     <!-- end Header Area -->
 
     <!-- off-canvas menu start -->
-   

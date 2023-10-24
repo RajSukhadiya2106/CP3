@@ -17,7 +17,7 @@
                         <thead>
                           <tr>
                             <th>Name</th>
-							<th>User Profile</th>
+							<!-- <th>User Profile</th> -->
                             <th>Email</th>
                             <th>Address</th>
                             <th>Contact No</th>
@@ -36,7 +36,7 @@
 						  ?>
 						  <tr>
 							<td><?php echo $row['User_name']?></td> 
-							<td><img src="../Images/<?php echo $row['User_img']?>"height="50" width="50" style="border-radius:50%"></td>
+							<!-- <td><img src="../Images/<?php echo $row['User_img']?>"height="50" width="50" style="border-radius:50%"></td> -->
 							<td><?php echo $row['Email']?></td>
 							<td><?php echo $row['Address']?></td>
 							<td><?php echo $row['Contact_no']?></td>

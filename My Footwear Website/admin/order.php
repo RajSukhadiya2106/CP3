@@ -18,7 +18,7 @@
 						<thead>
                           <tr>
                             <th>Order id</th>
-                            <th>Description</th>
+                          
                             <th>Order date</th>
 							<th>Payment status</th>
 							<th>User name</th>
@@ -41,7 +41,7 @@
 						  ?>
 						  <tr>
 							<td><?php echo $row['Order_id']?></td> 
-							<td><?php echo $row['Order_des']?></td>
+							<!-- <td><?php echo $row['Order_des']?></td> -->
 							<td><?php echo $row['Order_date']?></td>
 							<td><?php echo $row['Payment_status']?></td>
 							<td><?php echo $row['User_name']?></td>

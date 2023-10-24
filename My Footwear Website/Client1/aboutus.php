@@ -46,7 +46,7 @@
                                 <!-- blog single item start -->
                                 <div class="blog-post-item">
                                     <div class="blog-thumb">
-                                        <img src="assets/img/blog/blog-details-1.jpg" alt="blog thumb">
+                                        <img src="assets/img/about/about.jpg.jpg" alt="blog thumb">
                                     </div>
                                     <div class="blog-content blog-details">
                                         <h5 class="blog-title">
@@ -54,7 +54,7 @@
                                         </h5>
                                         <ul class="blog-meta">
                                             <li><span>By: </span>Admin,</li>
-                                            <li><span>On: </span>14.07.2029</li>
+                                            <li><span>On: </span>10.08.2023</li>
                                         </ul>
                                         <p> We created the Website.com Site Builder with the user's perspective in mind. We wanted to offer a platform that would require no coding skills or design experience. We keep it simple, so users can focus on creating an amazing website that reflects their brand. Best of all - it's free. You can get online, showcase your brand, or start selling products right away.</p>
                                         <blockquote>

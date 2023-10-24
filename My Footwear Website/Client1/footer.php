@@ -52,7 +52,7 @@
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="aboutus.php">About Us</a></li>
                                     <li><a href="contactus.php">Contact Us</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="index.php">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
     <!-- Scroll to top start -->
     <div class="scroll-top not-visible">
         <i class="fa fa-angle-up"></i>
-    </div>
+    </div>Top
     <!-- Scroll to Top End -->
 
     <!--=======================Javascript============================-->

@@ -137,7 +137,7 @@
               </li>
 			
 	   
-	   <!-- <li class="dropdown">
+	    <!-- <li class="dropdown">
               <a href="index.php" class="menu-toggle nav-link has-dropdown"><i
                   data-feather="layout"></i><span>Reports</span></a>
               <ul class="dropdown-menu">
@@ -172,7 +172,7 @@
 			  
 			  
 			  </ul>
-         </li> -->
+         </li>  -->
 			
           </div>	
 	    </aside>

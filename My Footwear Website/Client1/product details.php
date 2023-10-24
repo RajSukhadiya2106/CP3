@@ -130,15 +130,15 @@
                                 <div class="col-lg-12">
                                     <div class="product-review-info">
                                         <ul class="nav review-tab">
-                                            <li>
+                                            <!-- <li>
                                                 <a class="active" data-toggle="tab" href="#tab_one">description</a>
                                             </li>
                                             <li>
                                                 <a data-toggle="tab" href="#tab_two">information</a>
-                                            </li>
+                                            </li> -->
                                            
                                         </ul>
-                                        <div class="tab-content reviews-tab">
+                                        <!-- <div class="tab-content reviews-tab">
                                             <div class="tab-pane fade show active" id="tab_one">
                                                 <div class="tab-one">
                                                     <p></p>
@@ -176,7 +176,7 @@
                                             </div>
                                             <div class="tab-pane fade" id="tab_three">
                                                 <form action="#" class="review-form" method="POST">
-                                                    <h5>1 review for <span>Chaz Kangeroo Hoodies</span></h5>
+                                                    <h5>1 review for <span>Chaz Kangeroo Hoodies</span></h5> -->
 	  <?php
 										$sql1="select * from feedback f join user u join product p where f.User_id=u.User_id and f.P_id=p.P_id and f.P_id='".$id."'";
 										

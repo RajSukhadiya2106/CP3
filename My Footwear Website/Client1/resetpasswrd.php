@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		
 			$CurrentPassword=$_POST["Current Password"];
 			$NewPassword=$_POST["NewPassword"];
-		$ConformPassword=$_POST["ConformPassword];
+		$ConformPassword=$_POST["ConformPassword"];
 							
 			if(($Email!='') && ($CurrentPassword!='') && ($NewPassword!='') && ($ConformPassword!='') )
 			{				

@@ -10,7 +10,7 @@ $t=$_GET['amt'];
 $sql1="insert into `order`(Order_Date,Payment_Status,User_Id)
 values('".$d."',0,'".$uid."')";
 
-$result1=mysqli_query($conn,$sql1);
+$result1=mysqli_query($conn,$sql);
 $oid=mysqli_insert_id($conn);
 
 while($row=mysqli_fetch_array($result))
@@ -22,7 +22,7 @@ while($row=mysqli_fetch_array($result))
 	values('".$qty."','".$oid."','".$pid."','".$t."')";
 	
 	
-	$result2=mysqli_query($conn,$sql2);
+	$result2=mysqli_query($conn,$sql);
 }
 $sql3="delete from cart where User_id='".$uid."'";
 $result3=mysqli_query($conn,$sql3);

@@ -2,10 +2,9 @@
 <?php include ('header.php');
 require_once("../config/conn.php");
  
- if(isset($_GET['id']))
- {
-	 $id=$_GET['id'];
- }
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
 ?>
     <!-- off-canvas menu end -->
 

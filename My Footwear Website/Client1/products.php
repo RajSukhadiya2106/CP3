@@ -25,7 +25,7 @@ if(isset ($_GET['id']))
                                 <h1 class="breadcrumb-title">shop</h1>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">shop no sidebar</li>
+                                    <!-- <li class="breadcrumb-item active" aria-current="page">shop no sidebar</li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -245,7 +245,7 @@ if(isset ($_GET['id']))
                     </div>
 
                     <div class="minicart-button">
-                        <a href="cart.html"><i class="fa fa-shopping-cart"></i> view cart</a>
+                        <a href="cart.php"><i class="fa fa-shopping-cart"></i> view cart</a>
                         <a href="cart.html"><i class="fa fa-share"></i> checkout</a>
                     </div>
                 </div>
