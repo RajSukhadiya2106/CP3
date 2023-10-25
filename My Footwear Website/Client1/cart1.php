@@ -8,11 +8,9 @@
     require_once("../config/conn.php");
     $uid = $_SESSION['User_id'];
     $sql = "select * from cart c join product p where c.P_id=p.P_id  and c.User_id='" . $uid . "'";
-
-
-
-
     $result = mysqli_query($conn, $sql);
+
+
     ?>
  <br /> <br /> <br />
  <div class="belly-bredcrumb-section">
@@ -49,6 +47,8 @@
 
                                     while ($row = mysqli_fetch_array($result)) {
                                         $cid = $row['Cart_id'];
+                                        $p_name = $row['P_name'];
+
                                     ?>
                                      <tr>
                                          <td class="pro-thumbnail"><a href=""><img src="assets/img/product/<?php echo $row['P_image'] ?>" alt="Product"></a></td>
@@ -63,7 +63,6 @@
                                              </div>
                                          </td>
                                          <td class="pro-price"><span>₹<?php echo $row['Cart_price'] * $row['Cart_quantity'] ?></span></td>
-                                         <!--<td class="pro-subtotal"><span></span></td>-->
                                          <td class="pro-remove"><a href="cartdelete.php?id=<?php echo $row['Cart_id'] ?>"><i class="fa fa-trash-o"></i></a></td>
 
                                      </tr>
@@ -106,7 +105,7 @@
                              <table class="table">
                                  <tr>
                                      <td> Sub Total</td>
-                                     <td><span>Rs.<?php echo $amt; ?></span></td>
+                                     <td><span><?php echo $amt; ?></span></td>
 
                                  </tr>
                                  <tr>
@@ -121,18 +120,13 @@
                              </table>
                          </div>
                      </div>
-                     <a href='checkout2.php?amt=<?php echo $amt ?>' class="btn d-block">Proceed Checkout</a>
+                     <a href='checkout.php?amt=<?php echo $amt ?>&p_name=<?php echo $p_name ?>' class="btn d-block">Proceed Checkout</a>
                  </div>
              </div>
          </div>
      </div>
  </div>
  </div>
- <!-- cart main wrapper end -->
  </main>
- <!-- Cart Page End -->
-
-
- <!-- Site Bottom Starts -->
  <?php include("footer.php");
     ?>

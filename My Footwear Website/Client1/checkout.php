@@ -3,23 +3,17 @@
 
 <head>
     <title>Checkout</title>
-    <!-- Include your CSS stylesheets and JavaScript libraries here -->
 </head>
 
 <body>
 
     <?php
-    // Your PHP code here for handling form submission and retrieving order details
     require_once("../config/conn.php");
     include("header.php");
-
-    // Check if the user is authenticated
     if (!isset($_SESSION['User_id'])) {
         echo "User is not authenticated.";
         exit;
     }
-
-    // Get user information
     $user_id = $_SESSION['User_id'];
     $sql = "SELECT * FROM user WHERE User_id = '$user_id'";
     $result = mysqli_query($conn, $sql);
@@ -35,14 +29,11 @@
         echo "No user data found.";
         exit;
     }
-
-    // Handle form submission for order creation
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $order_description = $_POST['Order_des'];
         $order_date = date('Y-m-d');
         $payment_method = $_POST['paymentmethod']; // Get selected payment method
 
-        // Create a new order in the database
         $sql = "INSERT INTO `order` (Order_des, Order_date, Payment_status, User_id, Order_status)
         VALUES ('$order_description', '$order_date', ' $payment_method ', $user_id, 0)";
 
@@ -64,19 +55,15 @@
         JOIN `order details` ot ON o.Order_id = ot.Order_id
         JOIN product p ON ot.P_id = p.P_id
         WHERE o.Order_id = '$oid'";
-
     $result = mysqli_query($conn, $sql);
     ?>
 
     <main>
-        <!-- Breadcrumb and other content can be placed here if needed -->
-
         <div class="checkout-page-wrapper section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
-                            <!-- Checkout Billing Details -->
                             <div class="col-lg-6">
                                 <div class="checkout-billing-details-wrap">
                                     <h4 class="checkout-title">Billing Details</h4>
@@ -109,9 +96,8 @@
                                                 <input type="text" id="phone" name="phone" placeholder="Phone" value="<?php echo $phone; ?>" />
                                             </div>
                                             <div class="single-input-item">
-                                                <label for="ordernote">Order Note</label>
-                                                <textarea name="Order_des" id="Order_des" cols="30" rows="3" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-
+                                                <label>Product Name</label>
+                                                <input value=<?php echo $_GET['p_name']  ?> name="Order_des" id="Order_des" type="text" readonly />
                                             </div>
 
                                     </div>
@@ -133,16 +119,6 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <?php
-                                                    while ($row = mysqli_fetch_array($result)) {
-                                                    ?>
-                                                        <tr>
-                                                            <td><?php echo $row['P_name']; ?></td>
-                                                            <td>Rs.<?php echo $row['P_price']; ?> x<?php echo $row['Quantity']; ?></td>
-                                                        </tr>
-                                                    <?php
-                                                    }
-                                                    ?>
                                                 </tbody>
                                                 <tfoot>
                                                     <tr>
@@ -156,7 +132,6 @@
                                                 </tfoot>
                                             </table>
                                         </div>
-
                                         <!-- Order Payment Method (Continuation) -->
                                         <div class="order-payment-method">
 
@@ -223,19 +198,14 @@
             </div>
         </div>
 
-        <!-- Your JavaScript and other code goes here -->
-
     </main>
     <!-- main wrapper end -->
-
     <?php
     include('footer.php');
     ?>
 
     <script src="assets/js/vendor.js"></script>
-    <!--=== All Plugins Js ===-->
     <script src="assets/js/plugins.js"></script>
-    <!--=== Active Js ===-->
     <script src="assets/js/active.js"></script>
 </body>
 

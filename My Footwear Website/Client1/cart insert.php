@@ -21,8 +21,7 @@ require_once("../config/conn.php");
 	  $total = $amount * $qty;
 	  
 	  $sql3 = "select * from cart where P_id=$pid and User_id=$uid";	 
-	  //echo $sql3;
-	  //die;
+	  
 	  
 	  $result3 = mysqli_query($conn,$sql3);
 	  
@@ -42,8 +41,7 @@ require_once("../config/conn.php");
 	  {
 	  $sql="insert into cart(Cart_date,User_id,P_id,Cart_quantity,Cart_price)
 	  values('".$d."','".$uid."','".$pid."','".$qty."','".$total."')";
-	  //echo $sql;
-	  //die;
+	
 	  
 	  }
 	  $result=mysqli_query($conn,$sql);
@@ -57,4 +55,3 @@ require_once("../config/conn.php");
 		  echo "<meta http-equiv='refresh' content='0;url=shop-single.php'>"; 
 	  }
 	  }
- ?>

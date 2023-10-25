@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php include('header.php')
 
-    ?>
+?>
 
 <!-- off-canvas menu end -->
 
@@ -112,11 +112,11 @@
                         $sql = "select * from product p join `sub-category` s where p.Sub_C_id=s.Sub_C_id";
                         $result = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_array($result)) {
-                            ?>
+                        ?>
                             <div class="product-item mb-50">
                                 <div class="product-thumb">
-                                    <a href="product details.php">
-                                        <a href="product details.php?id=<?php echo $row['P_id']; ?>">
+                                    <a href="productdetails.php">
+                                        <a href="productdetails.php?id=<?php echo $row['P_id']; ?>">
                                             <img height="200" src="assets/img/product/<?php echo $row['P_image'] ?>" alt="">
                                         </a>
                                 </div>
@@ -140,14 +140,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
-                        <!-- product single item start -->
-
-
-
-                        <!-- product single item start -->
+                  
                     </div>
                 </div>
             </div>
@@ -204,8 +200,8 @@
                                     </div>
                                     <div class="product-link-2">
                                         <!-- <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a> -->
-                                        <a href="" data-toggle="tooltip" title="Add To Cart"><i
-                                                class="ion-bag"></i></a>
+                                        <!-- <a href="" data-toggle="tooltip" title="Add To Cart"><i -->
+                                        <!-- class="ion-bag"></i></a> -->
 
                                     </div>
                                 </div>
@@ -238,8 +234,8 @@
                                     </div>
                                     <div class="product-link-2">
                                         <!-- <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a> -->
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i
-                                                class="ion-bag"></i></a>
+                                        <!-- <a href="#" data-toggle="tooltip" title="Add To Cart"><i
+                                                class="ion-bag"></i></a> -->
 
                                     </div>
                                 </div>
@@ -272,8 +268,8 @@
                                     </div>
                                     <div class="product-link-2">
                                         <!-- <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a> -->
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i
-                                                class="ion-bag"></i></a>
+                                        <!-- <a href="#" data-toggle="tooltip" title="Add To Cart"><i
+                                                class="ion-bag"></i></a> -->
 
                                     </div>
                                 </div>
@@ -306,8 +302,8 @@
                                     </div>
                                     <div class="product-link-2">
                                         <!-- <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a> -->
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i
-                                                class="ion-bag"></i></a>
+                                        <!-- <a href="#" data-toggle="tooltip" title="Add To Cart"><i
+                                                class="ion-bag"></i></a> -->
 
                                     </div>
                                 </div>
@@ -340,10 +336,8 @@
                                     </div>
                                     <div class="product-link-2">
                                         <!-- <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a> -->
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i
-                                                class="ion-bag"></i></a>
-                                        <!-- <a href="#" data-toggle="modal" data-target="#quick_view"> <span data-toggle="tooltip"
-                                                title="Quick View"><i class="ion-ios-eye-outline"></i></span> </a> -->
+                                        <!-- <a href="#" data-toggle="tooltip" title="Add To Cart"><i
+                                                class="ion-bag"></i></a> -->
                                     </div>
                                 </div>
                             </div>
@@ -374,11 +368,7 @@
                                         <span><i class="ion-android-star"></i></span>
                                     </div>
                                     <div class="product-link-2">
-                                        <!-- <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a> -->
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i
-                                                class="ion-bag"></i></a>
-                                        <!-- <a href="#" data-toggle="modal" data-target="#quick_view"> <span data-toggle="tooltip"
-                                                title="Quick View"><i class="ion-ios-eye-outline"></i></span> </a> -->
+
                                     </div>
                                 </div>
                             </div>
@@ -472,14 +462,10 @@
                                 </div>
                             </div>
                             <div class="pro-nav slick-row-5">
-                                <div class="pro-nav-thumb"><img src="assets/img/product/product-details-img1.jpg"
-                                        alt="" /></div>
-                                <div class="pro-nav-thumb"><img src="assets/img/product/product-details-img2.jpg"
-                                        alt="" /></div>
-                                <div class="pro-nav-thumb"><img src="assets/img/product/product-details-img3.jpg"
-                                        alt="" /></div>
-                                <div class="pro-nav-thumb"><img src="assets/img/product/product-details-img4.jpg"
-                                        alt="" /></div>
+                                <div class="pro-nav-thumb"><img src="assets/img/product/product-details-img1.jpg" alt="" /></div>
+                                <div class="pro-nav-thumb"><img src="assets/img/product/product-details-img2.jpg" alt="" /></div>
+                                <div class="pro-nav-thumb"><img src="assets/img/product/product-details-img3.jpg" alt="" /></div>
+                                <div class="pro-nav-thumb"><img src="assets/img/product/product-details-img4.jpg" alt="" /></div>
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -492,8 +478,7 @@
                                     <span class="regular-price">Rs700</span>
                                     <span class="old-price"><del>Rs800</del></span>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+
                                 <div class="quantity-cart-box d-flex align-items-center mb-20">
                                     <div class="quantity">
                                         <div class="pro-qty"><input type="text" value="1"></div>

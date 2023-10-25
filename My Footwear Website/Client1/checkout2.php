@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 require_once("../config/conn.php");
 $uid=$_SESSION['User_id'];
@@ -29,6 +29,6 @@ $result3=mysqli_query($conn,$sql3);
 
 if($result3)
 {
-echo "<meta http-equiv='refresh' content='0;url=Checkout.php?id=$oid&amt=$t&qty=$qty'>";
+echo "<meta http-equiv='refresh' content='0;url=Checkout.php?id=$oid&amt=$t&qty=$qty&p_name=$p_name'>";
 }	
-?>
+?> -->

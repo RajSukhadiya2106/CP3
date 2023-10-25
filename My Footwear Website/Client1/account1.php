@@ -43,7 +43,7 @@ require_once('../config/conn.php');
 						<center>
                         <div class="col-lg-6">
                             <div class="login-reg-form-wrap signup-form">
-                                <h2>Edit Profile Form</h2>
+                                <!-- <h2>Edit Profile Form</h2> -->
                                 <form method="post">
 								<div class="single-input-item">
                                         <input type="text" name="User_name" value="<?php echo $row['User_name'];?>" placeholder="User name" required />
@@ -90,9 +90,9 @@ require_once('../config/conn.php');
                                         <div class="login-reg-form-meta">
                                         </div>
                                     </div>
-                                    <div class="single-input-item">
+                                    <!-- <div class="single-input-item">
                                         <button class="btn">Submit</button>
-                                    </div>
+                                    </div> -->
                                 </form>
 								</div>
                             </div>

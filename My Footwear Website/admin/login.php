@@ -43,21 +43,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-<!-- Mirrored from www.radixtouch.in/templates/admin/otika/source/light/auth-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Nov 2019 14:22:21 GMT -->
 
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Shoeholic - Admin Dashboard </title>
-  <!-- General CSS Files -->
+  <title>Jaymin Footwear - Admin Dashboard </title>
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/bundles/bootstrap-social/bootstrap-social.css">
-  <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
-  <!-- Custom style CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='shoeholic.png' />
 </head>
 
 <body>
@@ -121,20 +116,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
   <style>
     .error {
-      color: pink:
+      color: pink;
     }
   </style>
-  <!-- General JS Scripts -->
   <script src="assets/js/app.min.js"></script>
-  <!-- JS Libraies -->
-  <!-- Page Specific JS File -->
-  <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
-  <!-- Custom JS File -->
   <script src="assets/js/custom.js"></script>
 </body>
-
-
-<!-- Mirrored from www.radixtouch.in/templates/admin/otika/source/light/auth-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Nov 2019 14:22:21 GMT -->
 
 </html>
